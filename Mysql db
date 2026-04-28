@@ -1,0 +1,76 @@
+
+University-Management-System
+//Database
+//Mysql workbench
+
+--------------------------------------------------------
+create database universitymanagementsystem;
+use universitymanagementsystem;
+create table login(username varchar(30), password varchar(30));
+CREATE TABLE teacher(
+  name VARCHAR(40),
+  fname VARCHAR(40),
+  empID VARCHAR(40),
+  dob VARCHAR(40),
+  address VARCHAR(40),
+  phone VARCHAR(40),
+  email VARCHAR(40),
+  class10 VARCHAR(20),
+  class12 VARCHAR(20),
+  aadhar VARCHAR(40),
+  course VARCHAR(30),
+  department VARCHAR(40)
+);
+
+select * from teacher;
+create table student(name varchar(40),fname varchar(40),rollno varchar(40), dob varchar(40), address varchar(40), phone varchar(40), email varchar(40),course varchar(40), branch varchar(40));
+select * from student;
+create table studentleave(rollno varchar(20), date varchar(20), Time varchar(20));
+select * from studentleave;
+create table teacherleave(empID varchar(20), date varchar(20), Time varchar(20));
+select * from teacherleave;
+
+drop table subject;
+
+create table subject(rollno varchar(20), semester varchar(30), sub1 varchar(40), sub2 varchar(40), sub3 varchar(40), sub4 varchar(40), sub5 varchar(40));
+select * from subject;
+
+
+
+create table marks(rollno varchar(20), semester varchar(20), mrk1 varchar(50), mrk2 varchar(50), mrk3 varchar(50), mrk4 varchar(50), mrk5 varchar(50));
+select * from marks;
+
+alter table student
+add class10 varchar(20), 
+add class12 varchar(20), 
+add aadhar varchar(30);
+
+
+desc teacher;
+drop table teacher;
+
+
+create table fee(course varchar(20), semester1 varchar(20), semester2 varchar(20), semester3 varchar(20), semester4 varchar(20), semester5 varchar(20), semester6 varchar(20), semester7 varchar(20), semester8 varchar(20));
+select * from fee;
+
+insert into fee values("BTech", "49000", "43000","43000","43000","43000","43000","43000","43000");
+
+insert into fee values("Bsc", "44000", "35000","35000","35000","35000","35000","","");
+
+insert into fee values("BCA", "39000", "34000","34000","34000","34000","34000","","");
+
+insert into fee values("MTech", "70000", "60000","60000","60000","","","","");
+
+create table feecollege(rollno varchar(20), course varchar(50), branch varchar(40), semester varchar(40), total varchar(40));
+select * from feecollege;
+
+
+ 
+
+
+
+
+
+
+
+
